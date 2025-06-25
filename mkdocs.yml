@@ -290,3 +290,5 @@ nav:
       - insiders/community-experts-program/index.md
   - Blog:
     - blog/index.md
+extra_templates:
+  - CNAME
