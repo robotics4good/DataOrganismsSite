@@ -292,3 +292,7 @@ nav:
     - blog/index.md
 extra_templates:
   - CNAME
+
+# Copy CNAME file to site directory
+extra_files:
+  - CNAME
