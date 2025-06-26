@@ -45,8 +45,11 @@ jobs:
           sparse-checkout: |
             docs
             includes
-            material/overrides
-            src/templates/partials/languages
+            material
+            src
+            mkdocs.yml
+            pyproject.toml
+            requirements.txt
 
       - name: Set up Python runtime
         uses: actions/setup-python@v5
@@ -70,8 +73,8 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install mkdocs-material
-          pip install .[recommended,git,imaging]
+          pip install mkdocs-material[recommended,git,imaging]
+          pip install -e .
 
       - name: Build documentation
         env:
