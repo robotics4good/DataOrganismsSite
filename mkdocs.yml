@@ -23,14 +23,14 @@ site_name: Data Organisms
 site_url: https://dataorganisms.com/
 site_author: Data Organisms Team
 site_description: >-
-  Data Organisms - An embodied data visualization learning platform for data science education
+  An embodied data visualization learning platform for data science education
 
 # Repository
 repo_name: DataOrganisms/DataOrganismsSite
 repo_url: https://github.com/DataOrganisms/DataOrganismsSite
 
 # Copyright
-copyright: Copyright &copy; 2024 Data Organisms
+copyright: Copyright &copy; 2025 Data Organisms
 
 # Configuration
 theme:
@@ -115,10 +115,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DataOrganisms
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/dataorganisms/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/dataorganisms/
+  footer: |
+    &copy; 2025 Data Organisms. All rights reserved.
 
 # Extra CSS
 extra_css:
