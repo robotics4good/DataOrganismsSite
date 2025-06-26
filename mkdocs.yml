@@ -119,6 +119,10 @@ extra:
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/dataorganisms/
 
+# Extra CSS
+extra_css:
+  - assets/stylesheets/extras.css
+
 # Extensions
 markdown_extensions:
   - abbr
@@ -291,8 +295,4 @@ nav:
   - Blog:
     - blog/index.md
 extra_templates:
-  - CNAME
-
-# Copy CNAME file to site directory
-extra_files:
   - CNAME

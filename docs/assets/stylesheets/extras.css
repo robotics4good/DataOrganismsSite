@@ -1,0 +1,8 @@
+/* Parallel layering effect for hero section */
+.md-hero__background .layer {
+  position: absolute;
+  width: 100%;
+  top: 0; 
+  left: 0;
+  /* add transforms / translateZ as needed for depth */
+} 
