@@ -30,4 +30,14 @@
 
 .md-hero__background .layer-6 {
   transform: translateZ(0px);
+}
+
+/* Remove any extra margin/padding at the top of the page */
+.md-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.md-main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 } 
