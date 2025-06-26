@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+<header class="md-header" data-md-component="header">
+  <div class="md-header__inner md-grid" style="display: flex; align-items: center;">
+    <!-- Logo at far left -->
+    <a href="{{ config.site_url | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}">
+      {% include "partials/logo.html" %}
+    </a>
+    <!-- Navigation tabs -->
+    <nav class="md-tabs" aria-label="{{ lang.t('tabs') }}">
+      <ul class="md-tabs__list">
+        {% for nav_item in nav %}
+          {% include "partials/tabs-item.html" %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <!-- Rest of header (search, buttons, etc.) -->
+    {{ super() }}
+  </div>
+</header>
+{% endblock %} 
