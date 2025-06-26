@@ -1,6 +1,6 @@
 ---
 template: home.html
-title: DataOrganisms
+title: Data Organisms
 social:
   cards_layout_options:
     title: A comprehensive platform for data management and analysis

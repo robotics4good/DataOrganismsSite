@@ -19,18 +19,18 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: DataOrganisms
+site_name: Data Organisms
 site_url: https://dataorganisms.com/
-site_author: DataOrganisms Team
+site_author: Data Organisms Team
 site_description: >-
-  DataOrganisms - A comprehensive platform for data management and analysis
+  Data Organisms - An embodied data visualization learning platform for data science education
 
 # Repository
 repo_name: DataOrganisms/DataOrganismsSite
 repo_url: https://github.com/DataOrganisms/DataOrganismsSite
 
 # Copyright
-copyright: Copyright &copy; 2024 DataOrganisms Team
+copyright: Copyright &copy; 2024 Data Organisms
 
 # Configuration
 theme:
@@ -86,7 +86,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/images/DataOrg_ModLogot.png
   logo: assets/images/DataOrg_ModLogo.png
   icon:
     logo: logo

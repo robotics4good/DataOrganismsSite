@@ -32,8 +32,8 @@
   transform: translateZ(0px);
 }
 
-/* Force hide md-banner on all pages */
-.md-banner, .md-banner__inner, .md-header__announce, [data-md-component="announce"] {
+/* Hide and reclaim space from md-banner */
+.md-banner {
   display: none !important;
   height: 0 !important;
   min-height: 0 !important;
@@ -47,4 +47,16 @@
 .md-main, .md-header {
   margin-top: 0 !important;
   padding-top: 0 !important;
-} 
+}
+
+/* Reduce space between logo and title in the header */
+.md-logo {
+  margin-right: 0.3rem !important;  /* Reduce as needed */
+}
+
+.md-header__title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;
+}
