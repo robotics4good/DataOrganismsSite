@@ -5,25 +5,32 @@
 {% block tabs %}
   {{ super() }}
   <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
-  <section class="mdx-container">
-    <div class="md-grid md-typeset">
-      <div class="mdx-hero">
-        <div class="mdx-hero__image">
-          <img src="assets/images/illustration.png" alt="" width="1659" height="1200" draggable="false">
-        </div>
-        <div class="mdx-hero__content">
-          <h1>Technical documentation that just works</h1>
-          <p>{{ config.site_description }}. Set up in 5 minutes.</p>
-          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
-            Quick start
-          </a>
-          <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button">
-            Get Insiders
-          </a>
+  <div class="md-hero md-hero--primary">
+    <div class="md-hero__background">
+      <img src="assets/images/layers/1-landscape.png" class="layer layer-1">
+      <img src="assets/images/layers/2-plateau.png"   class="layer layer-2">
+      <img src="assets/images/layers/3-astronaut-1.png" class="layer layer-3">
+      <img src="assets/images/layers/4-astronaut-2.png" class="layer layer-4">
+      <img src="assets/images/layers/5-plants-1.png" class="layer layer-5">
+      <img src="assets/images/layers/6-plants-2.png" class="layer layer-6">
+    </div>
+    <div class="mdx-container">
+      <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+          <div class="mdx-hero__content">
+            <h1>DataOrganisms</h1>
+            <p>{{ config.site_description }}</p>
+            <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+              Quick start
+            </a>
+            <a href="{{ 'getting-started/' | url }}" title="Getting Started" class="md-button">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 {% endblock %}
 {% block content %}{% endblock %}
 {% block footer %}{% endblock %}

@@ -5,4 +5,29 @@
   top: 0; 
   left: 0;
   /* add transforms / translateZ as needed for depth */
+}
+
+/* Specific layer positioning for parallax effect */
+.md-hero__background .layer-1 {
+  transform: translateZ(-100px);
+}
+
+.md-hero__background .layer-2 {
+  transform: translateZ(-80px);
+}
+
+.md-hero__background .layer-3 {
+  transform: translateZ(-60px);
+}
+
+.md-hero__background .layer-4 {
+  transform: translateZ(-40px);
+}
+
+.md-hero__background .layer-5 {
+  transform: translateZ(-20px);
+}
+
+.md-hero__background .layer-6 {
+  transform: translateZ(0px);
 } 
