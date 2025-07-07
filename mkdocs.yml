@@ -26,8 +26,8 @@ site_description: >-
   An embodied data visualization learning platform for data science education
 
 # Repository
-repo_name: DataOrganisms/DataOrganismsSite
-repo_url: https://github.com/DataOrganisms/DataOrganismsSite
+repo_name: Data Book
+repo_url: https://dataorganisms.com/databook
 
 # Copyright
 copyright: Copyright &copy; 2025 Data Organisms
