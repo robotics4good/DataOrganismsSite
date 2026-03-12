@@ -4,8 +4,8 @@
 {% extends "main.html" %}
 {% block tabs %}
   {{ super() }}
-  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
-  <div class="md-hero md-hero--primary">
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}body:has(.home-page-marker) .md-tabs,body:has(.home-page-marker) .md-header__nav,body:has(.home-page-marker) .md-header__button:not(.md-logo){display:none!important}</style>
+  <div class="md-hero md-hero--primary home-page-marker">
     <div class="md-hero__background">
       <img src="assets/images/layers/1-landscape.png" class="layer layer-1">
       <img src="assets/images/layers/2-plateau.png"   class="layer layer-2">
@@ -20,11 +20,8 @@
           <div class="mdx-hero__content">
             <h1>Data Organisms</h1>
             <p>{{ config.site_description }}</p>
-            <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            <a href="https://dataorganismsstudent-v2.netlify.app/select-role" title="Quick start" class="md-button md-button--primary">
               Quick start
-            </a>
-            <a href="{{ 'getting-started/' | url }}" title="Getting Started" class="md-button">
-              Learn More
             </a>
           </div>
         </div>
