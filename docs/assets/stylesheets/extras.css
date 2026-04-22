@@ -86,3 +86,43 @@
 .mdx-hero__content {
   margin-bottom: -8rem; /* Space from the bottom, adjust as needed */
 }
+
+/* Team page */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--md-default-bg-color) 92%, var(--md-default-fg-color) 8%);
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
+}
+
+.team-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid var(--md-default-bg-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.team-name {
+  font-weight: 600;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+}
