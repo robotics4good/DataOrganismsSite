@@ -61,6 +61,17 @@
   align-items: center;
 }
 
+/* Keep Data Book + Team as separate clickable items */
+.md-header__source {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-source--team .md-source__icon {
+  opacity: 0.9;
+}
+
 /* (Team link is rendered next to Data Book using md-source styles) */
 
 /* Ensure homepage footer is above hero layers */

@@ -8,6 +8,8 @@
 
 <!-- Header -->
 <header class="{{ class }}" data-md-component="header">
+  {# Robust homepage detection (template overrides can affect page.is_homepage) #}
+  {% set is_homepage = page and (page.is_homepage or page.url == "" or (page.file and page.file.src_path == "index.md")) %}
   <nav
     class="md-header__inner md-grid"
     aria-label="{{ lang.t('header') }}"
@@ -98,22 +100,20 @@
     {% if config.repo_url %}
       <div class="md-header__source">
         {% include "partials/source.html" %}
-      </div>
-    {% endif %}
 
-    {% if page and page.is_homepage %}
-      <div class="md-header__source">
-        <a
-          href="{{ 'team/' | url }}"
-          title="Team"
-          class="md-source"
-          aria-label="Team"
-        >
-          <div class="md-source__icon md-icon">
-            {% include ".icons/material/account-group.svg" %}
-          </div>
-          <div class="md-source__repository">Team</div>
-        </a>
+        {% if is_homepage %}
+          <a
+            href="{{ 'team/' | url }}"
+            title="Team"
+            class="md-source md-source--team"
+            aria-label="Team"
+          >
+            <div class="md-source__icon md-icon">
+              {% include ".icons/material/account-group.svg" %}
+            </div>
+            <div class="md-source__repository">Team</div>
+          </a>
+        {% endif %}
       </div>
     {% endif %}
   </nav>
