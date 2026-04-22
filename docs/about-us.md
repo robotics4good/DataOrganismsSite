@@ -1,4 +1,10 @@
-<h1>About us</h1>
+---
+hide:
+  - navigation
+  - toc
+---
+
+<h1>About Us</h1>
 
 Data Organisms grew out of a genuine collaboration across disciplines. The games were shaped by researchers in cognitive science, learning design, and human-computer interaction, working alongside educators, hardware engineers, and community facilitators. What brought them together was a shared question: how do children come to think with data, not just about it? That question drew contributions from people who study how minds develop, people who build things with their hands, and people who spend time in classrooms and field settings where learning actually happens. The result reflects that range.
 

@@ -182,6 +182,6 @@ not_in_nav: |
 # Page tree
 nav:
   - Home: index.md
-  - About us: about-us.md
+  - About Us: about-us.md
 extra_templates:
   - CNAME
