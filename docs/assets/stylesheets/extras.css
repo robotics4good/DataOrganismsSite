@@ -61,6 +61,22 @@
   align-items: center;
 }
 
+/* Homepage header quick link */
+.md-header__team {
+  margin-top: 0.15rem;
+}
+
+.md-header__team-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--md-primary-fg-color);
+}
+
+.md-header__team-link:hover {
+  text-decoration: underline;
+}
+
 /* Ensure homepage footer is above hero layers */
 .homepage-footer {
   position: relative;
