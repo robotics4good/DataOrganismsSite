@@ -45,15 +45,13 @@
             {% else %}
               {{ page.title }}
             {% endif %}
+
+            {% if page and page.is_homepage %}
+              <span class="md-header__team-sep" aria-hidden="true">&nbsp;·&nbsp;</span>
+              <a href="{{ 'team/' | url }}" class="md-header__team-link">Team</a>
+            {% endif %}
           </span>
         </div>
-
-        <!-- Homepage-only quick link -->
-        {% if page and page.is_homepage %}
-          <div class="md-header__team">
-            <a href="{{ 'team/' | url }}" class="md-header__team-link">Team</a>
-          </div>
-        {% endif %}
       </div>
     </div>
 
