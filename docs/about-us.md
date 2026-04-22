@@ -47,12 +47,12 @@ Data Organisms grew out of a genuine collaboration across disciplines. The games
     <div class="team-title">Curriculum Designer & Facilitator, UC San Diego</div>
   </div>
   <div class="team-card">
-    <img src="../assets/images/ChristianOppj.png" alt="Team member photo" class="team-avatar" loading="lazy" draggable="false">
+    <img src="../assets/images/ChristianOstergaardppj.png" alt="Team member photo" class="team-avatar" loading="lazy" draggable="false">
     <div class="team-name">Christian Ostergaard</div>
     <div class="team-title">Learning Experience Designer & Facilitator, UC San Diego</div>
   </div>
   <div class="team-card">
-    <img src="../assets/images/andreappj.jpg" alt="Team member photo" class="team-avatar" loading="lazy" draggable="false">
+    <img src="../assets/images/andreappj.jpeg" alt="Team member photo" class="team-avatar" loading="lazy" draggable="false">
     <div class="team-name">Prof. Andrea Chiba</div>
     <div class="team-title">Advisor & Professor, Cognitive Science, UC San Diego</div>
   </div>
