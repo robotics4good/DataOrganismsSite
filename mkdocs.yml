@@ -178,7 +178,7 @@ not_in_nav: |
 # Page tree
 nav:
   - Home: index.md
-  - Team: team.md
+  - About us: about-us.md
   - Getting started:
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md

@@ -61,18 +61,23 @@
   align-items: center;
 }
 
-/* Keep Data Book + Team as separate clickable items */
+/* Keep Data Book + About us as separate clickable items */
 .md-header__source {
   display: flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-.md-source--team .md-source__icon {
-  opacity: 0.9;
+/* (Header tweaks) */
+
+/* Prevent "Data Book" from being truncated to "Data ..." in the header */
+.md-header__source .md-source__repository {
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
 }
 
-/* (Team link is rendered next to Data Book using md-source styles) */
+/* About us now uses md-source styling next to Data Book */
 
 /* Ensure homepage footer is above hero layers */
 .homepage-footer {
