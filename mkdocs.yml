@@ -122,6 +122,10 @@ extra:
 extra_css:
   - assets/stylesheets/extras.css
 
+# Extra JavaScript
+extra_javascript:
+  - assets/javascripts/image-protection.js
+
 # Extensions
 markdown_extensions:
   - abbr

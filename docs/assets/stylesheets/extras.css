@@ -132,6 +132,10 @@
   object-position: center;
   border: 4px solid var(--md-default-bg-color);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  /* Deterrence only: cannot truly prevent saving on the web */
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .team-name {
