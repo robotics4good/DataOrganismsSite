@@ -45,11 +45,6 @@
             {% else %}
               {{ page.title }}
             {% endif %}
-
-            {% if page and page.is_homepage %}
-              <span class="md-header__team-sep" aria-hidden="true">&nbsp;·&nbsp;</span>
-              <a href="{{ 'team/' | url }}" class="md-header__team-link">Team</a>
-            {% endif %}
           </span>
         </div>
       </div>
@@ -103,6 +98,22 @@
     {% if config.repo_url %}
       <div class="md-header__source">
         {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+
+    {% if page and page.is_homepage %}
+      <div class="md-header__source">
+        <a
+          href="{{ 'team/' | url }}"
+          title="Team"
+          class="md-source"
+          aria-label="Team"
+        >
+          <div class="md-source__icon md-icon">
+            {% include ".icons/material/account-group.svg" %}
+          </div>
+          <div class="md-source__repository">Team</div>
+        </a>
       </div>
     {% endif %}
   </nav>

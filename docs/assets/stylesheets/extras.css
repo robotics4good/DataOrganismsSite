@@ -61,20 +61,7 @@
   align-items: center;
 }
 
-.md-header__team-link {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--md-primary-fg-color);
-}
-
-.md-header__team-link:hover {
-  text-decoration: underline;
-}
-
-.md-header__team-sep {
-  opacity: 0.55;
-}
+/* (Team link is rendered next to Data Book using md-source styles) */
 
 /* Ensure homepage footer is above hero layers */
 .homepage-footer {
