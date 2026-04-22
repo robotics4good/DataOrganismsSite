@@ -100,7 +100,10 @@ def setting(type: str):
 # one additional level of `..` which we need to remove
 def _resolve_path(path: str, page: Page, files: Files):
     path, anchor, *_ = f"{path}#".split("#")
-    path = _resolve(files.get_file_from_path(path), page)
+    file = files.get_file_from_path(path)
+    if not file:
+        return f"#{anchor}" if anchor else "#"
+    path = _resolve(file, page)
     return "#".join([path, anchor]) if anchor else path
 
 # Resolve path of file relative to given page - the posixpath always includes
@@ -137,7 +140,7 @@ def _badge_for_version(text: str, page: Page, files: Files):
 
     # Return badge
     icon = "material-tag-outline"
-    href = _resolve_path("conventions.md#version", page, files)
+    href = _resolve_path("changelog/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Minimum version')",
         text = f"[{text}]({_resolve_path(path, page, files)})" if spec else ""
@@ -150,7 +153,7 @@ def _badge_for_version_insiders(text: str, page: Page, files: Files):
 
     # Return badge
     icon = "material-tag-heart-outline"
-    href = _resolve_path("conventions.md#version-insiders", page, files)
+    href = _resolve_path("insiders/changelog/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Minimum version')",
         text = f"[{text}]({_resolve_path(path, page, files)})" if spec else ""
@@ -159,7 +162,7 @@ def _badge_for_version_insiders(text: str, page: Page, files: Files):
 # Create badge for feature
 def _badge_for_feature(text: str, page: Page, files: Files):
     icon = "material-toggle-switch"
-    href = _resolve_path("conventions.md#feature", page, files)
+    href = _resolve_path("changelog/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Optional feature')",
         text = text
@@ -168,7 +171,7 @@ def _badge_for_feature(text: str, page: Page, files: Files):
 # Create badge for plugin
 def _badge_for_plugin(text: str, page: Page, files: Files):
     icon = "material-floppy"
-    href = _resolve_path("conventions.md#plugin", page, files)
+    href = _resolve_path("plugins/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Plugin')",
         text = text
@@ -177,7 +180,7 @@ def _badge_for_plugin(text: str, page: Page, files: Files):
 # Create badge for extension
 def _badge_for_extension(text: str, page: Page, files: Files):
     icon = "material-language-markdown"
-    href = _resolve_path("conventions.md#extension", page, files)
+    href = _resolve_path("setup/extensions/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Markdown extension')",
         text = text
@@ -186,7 +189,7 @@ def _badge_for_extension(text: str, page: Page, files: Files):
 # Create badge for utility
 def _badge_for_utility(text: str, page: Page, files: Files):
     icon = "material-package-variant"
-    href = _resolve_path("conventions.md#utility", page, files)
+    href = _resolve_path("plugins/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Third-party utility')",
         text = text
@@ -231,7 +234,7 @@ def _badge_for_demo(text: str, page: Page, files: Files):
 # Create badge for default value
 def _badge_for_default(text: str, page: Page, files: Files):
     icon = "material-water"
-    href = _resolve_path("conventions.md#default", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Default value')",
         text = text
@@ -240,7 +243,7 @@ def _badge_for_default(text: str, page: Page, files: Files):
 # Create badge for empty default value
 def _badge_for_default_none(page: Page, files: Files):
     icon = "material-water-outline"
-    href = _resolve_path("conventions.md#default", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Default value is empty')"
     )
@@ -248,7 +251,7 @@ def _badge_for_default_none(page: Page, files: Files):
 # Create badge for computed default value
 def _badge_for_default_computed(page: Page, files: Files):
     icon = "material-water-check"
-    href = _resolve_path("conventions.md#default", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Default value is computed')"
     )
@@ -256,7 +259,7 @@ def _badge_for_default_computed(page: Page, files: Files):
 # Create badge for metadata property flag
 def _badge_for_metadata(page: Page, files: Files):
     icon = "material-list-box-outline"
-    href = _resolve_path("conventions.md#metadata", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Metadata property')"
     )
@@ -264,7 +267,7 @@ def _badge_for_metadata(page: Page, files: Files):
 # Create badge for required value flag
 def _badge_for_required(page: Page, files: Files):
     icon = "material-alert"
-    href = _resolve_path("conventions.md#required", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Required value')"
     )
@@ -272,7 +275,7 @@ def _badge_for_required(page: Page, files: Files):
 # Create badge for customization flag
 def _badge_for_customization(page: Page, files: Files):
     icon = "material-brush-variant"
-    href = _resolve_path("conventions.md#customization", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Customization')"
     )
@@ -280,7 +283,7 @@ def _badge_for_customization(page: Page, files: Files):
 # Create badge for multiple instance flag
 def _badge_for_multiple(page: Page, files: Files):
     icon = "material-inbox-multiple"
-    href = _resolve_path("conventions.md#multiple-instances", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Multiple instances')"
     )
@@ -288,7 +291,7 @@ def _badge_for_multiple(page: Page, files: Files):
 # Create badge for experimental flag
 def _badge_for_experimental(page: Page, files: Files):
     icon = "material-flask-outline"
-    href = _resolve_path("conventions.md#experimental", page, files)
+    href = _resolve_path("reference/index.md", page, files)
     return _badge(
         icon = f"[:{icon}:]({href} 'Experimental')"
     )

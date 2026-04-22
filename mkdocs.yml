@@ -181,14 +181,7 @@ nav:
   - About us: about-us.md
   - Getting started:
     - Installation: getting-started.md
-    - Creating your site: creating-your-site.md
-    - Publishing your site: publishing-your-site.md
-    - Customization: customization.md
-    - Conventions: conventions.md
     - Browser support: browser-support.md
-    - Enterprise feedback: enterprise-support.md
-    - Philosophy: philosophy.md
-    - Alternatives: alternatives.md
     - License: license.md
     - Tutorials:
       - tutorials/index.md
@@ -201,7 +194,7 @@ nav:
         - tutorials/social/custom.md
     - Changelog:
       - changelog/index.md
-      - How to upgrade: upgrade.md
+      # - How to upgrade: upgrade.md
   - Setup:
     - setup/index.md
     - Changing the colors: setup/changing-the-colors.md
